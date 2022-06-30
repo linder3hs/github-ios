@@ -9,9 +9,21 @@ import SwiftUI
 
 @main
 struct GitHub_iOSApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
+    @StateObject var appState: AppState = .shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            switch appState.currentScreen {
+            case .sigIn:
+                SignView()
+                    .environmentObject(appState)
+            case .main:
+                MainView()
+                    .environmentObject(appState)
+            }
+            
         }
     }
 }
