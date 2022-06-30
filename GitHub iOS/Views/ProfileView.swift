@@ -8,16 +8,25 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    @StateObject var profileViewModel = ProfileViewModel()
+    
+    @State private var user: User? = nil
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             HStack(spacing: 30) {
-                Image("profile")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .clipShape(Circle())
-                    .frame(maxWidth: 80, maxHeight: 80, alignment: .center)
+                ImageAsync(
+                    height: 80,
+                    width: 80,
+                    photoUrl: (
+                        user?.photoUrl ??
+                        URL(string: "https://avatars.githubusercontent.com/u/20673011?s=400&u=313cb18dc7dcb95126b81d45315529ebcb257053&v=4")
+                    )!
+                )
+                
                 VStack(alignment: .leading) {
-                  Text("Linder Hassinger")
+                    Text(user?.name ?? "Anderson Hassinger")
                         .font(.system(size: 22, weight: .bold))
                     Text("linder3hs")
                 }
@@ -28,31 +37,17 @@ struct ProfileView: View {
             }
             Text("Software Developer")
             HStack(spacing: 50) {
-                HStack {
-                    Image(systemName: "building.fill")
-                    Text("WT")
-                }
-                HStack {
-                    Image(systemName: "location.circle.fill")
-                    Text("Lima, Perú")
-                }
+                RowIconText(icon: "building.fill", text: "WT")
+                RowIconText(icon: "location.circle.fill", text: "Lima, Perú")
             }
-            HStack {
-                Image(systemName: "link")
-                Text("www.linderhassinger.info")
-            }
-            HStack {
-                Image(systemName: "envelope.fill")
-                Text("linderhassinger@gmail.com")
-            }
-            HStack {
-                Image(systemName: "paperplane.circle")
-                Text("@linder3hs")
-            }
-            HStack {
-                Image(systemName: "cpu")
-                Text("Developer Program Member")
-            }
+            RowIconText(
+                icon: "envelope.fill",
+                text: user?.email ?? "linderhassinger00@gmail.com"
+            )
+            RowIconText(icon: "paperplane.circle", text: "@linder3hs")
+            RowIconText(icon: "cpu", text: "Developer Program Member")
+            RowIconText(icon: "link", text: "www.linderhassinger.info")
+            
             HStack(spacing: 10) {
                 HStack {
                     Image(systemName: "person.fill")
@@ -71,6 +66,9 @@ struct ProfileView: View {
               maxHeight: .infinity,
               alignment: .topLeading
         )
+        .onAppear {
+            user = profileViewModel.loadUserData()
+        }
     }
 }
 
