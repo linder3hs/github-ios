@@ -26,6 +26,7 @@ class AuthViewModel: ObservableObject {
             if error != nil {
                 self.showError = true
                 self.errorMessage = error!.localizedDescription
+                return
             }
             
             if credential != nil {
@@ -33,6 +34,7 @@ class AuthViewModel: ObservableObject {
                     if error != nil {
                         self.showError = true
                         self.errorMessage = error!.localizedDescription
+                        return
                     }
                     
                     guard let oauthCredential = authResult?.credential as? OAuthCredential else { return }
