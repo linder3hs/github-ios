@@ -16,6 +16,9 @@ struct GitHub_iOSApp: App {
     var body: some Scene {
         WindowGroup {
             switch appState.currentScreen {
+            case .launch:
+                LaunchView()
+                    .environmentObject(appState)
             case .sigIn:
                 SignView()
                     .environmentObject(appState)

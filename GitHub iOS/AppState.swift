@@ -12,10 +12,11 @@ class AppState: ObservableObject {
     static let shared = AppState()
     
     enum AppScreens {
+        case launch
         case sigIn
         case main
     }
     
-    @Published var currentScreen: AppScreens = .sigIn
+    @Published var currentScreen: AppScreens = .launch
     
 }
