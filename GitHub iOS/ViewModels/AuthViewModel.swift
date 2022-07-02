@@ -18,7 +18,25 @@ class AuthViewModel: ObservableObject {
     var provider = OAuthProvider(providerID: "github.com")
     var appState: AppState = .shared
     
-    let localRealm = try! Realm()
+    static let localRealm = try! Realm()
+    
+    static var authToken: String {
+        let users = localRealm.objects(GitHub.self)
+        return users[0]["accessToken"] as! String
+    }
+    
+    func save(oauthCredential: OAuthCredential) {
+        let objectGitHub = GitHub(
+            accessToken: oauthCredential.accessToken ?? "",
+            idToken: oauthCredential.idToken ?? "",
+            secret: oauthCredential.secret ?? "",
+            provider: oauthCredential.provider
+        )
+        
+        try! AuthViewModel.localRealm.write({
+            AuthViewModel.localRealm.add(objectGitHub)
+        })
+    }
     
     func login() {
         provider.scopes = ["user:email"]
@@ -39,16 +57,7 @@ class AuthViewModel: ObservableObject {
                     
                     guard let oauthCredential = authResult?.credential as? OAuthCredential else { return }
                     
-                    let objectGitHub = GitHub(
-                        accessToken: oauthCredential.accessToken ?? "",
-                        idToken: oauthCredential.idToken ?? "",
-                        secret: oauthCredential.secret ?? "",
-                        provider: oauthCredential.provider
-                    )
-                    
-                    try! self.localRealm.write({
-                        self.localRealm.add(objectGitHub)
-                    })
+                    self.save(oauthCredential: oauthCredential)
                     
                     self.appState.currentScreen = .main
                 }
@@ -56,5 +65,5 @@ class AuthViewModel: ObservableObject {
             
         }
     }
-    
+        
 }

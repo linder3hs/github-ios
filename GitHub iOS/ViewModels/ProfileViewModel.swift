@@ -10,17 +10,9 @@ import FirebaseAuth
 
 class ProfileViewModel: ObservableObject {
     
-    func loadUserData() -> User? {
-        let user = Auth.auth().currentUser
-        
-        if let user = user {
-            return User(
-                name: user.displayName!,
-                email: user.email!,
-                photoUrl: user.photoURL!
-            )
-        }
-        
-        return nil
+    let userRequest = UserRequest()
+    
+    func loadUserData() async -> User? {
+        return await userRequest.loadData()
     }
 }

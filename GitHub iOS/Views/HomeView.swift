@@ -19,7 +19,6 @@ struct HomeView: View {
         Items(icon: "star.fill", text: "Starred"),
     ]
     
-    
     var body: some View {
             VStack(alignment: .leading, spacing: 20) {
                 TitleView(title: "Home")
