@@ -9,8 +9,8 @@ import SwiftUI
 
 struct RowIconText: View {
     
-    @State var icon: String
-    @State var text: String
+    @Binding var icon: String
+    @Binding var text: String
     
     var body: some View {
         HStack {
@@ -22,6 +22,6 @@ struct RowIconText: View {
 
 struct RowIconText_Previews: PreviewProvider {
     static var previews: some View {
-        RowIconText(icon: "paperplane.circle", text: "@linder3hs")
+        RowIconText(icon: .constant("paperplane.circle"), text: .constant("linder3hs"))
     }
 }

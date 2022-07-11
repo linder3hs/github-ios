@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct NotificationsView: View {
+    
+    @StateObject var notificationViewModel = NotificationViewModel()
+    
+    @State var notifications = [Notifications]()
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             TitleView(title: "Inbox")
@@ -29,21 +34,11 @@ struct NotificationsView: View {
                 }
             }
             
-            List {
-                ForEach(1..<10) { _ in
-                    HStack {
-                        Image("arrow.triangle.branch")
-                        VStack(alignment: .leading, spacing: 12) {
-                            Text("doubleencore/ SNY-Android #360")
-                            Text("Future 1.2.1 into milestone")
-                            Text("Merged #360 into milestone.")
-                        }
-                    }
-                    
-                }
-                .listRowInsets(EdgeInsets())
-                .padding(.bottom)
-                .padding(.top)
+            List(notifications, id: \.id) { notification in
+                NotificationRow(notification: notification)
+            }
+            .task {
+                notifications = await notificationViewModel.loadNotifications()!
             }
             .listStyle(PlainListStyle())
             .padding(.top)

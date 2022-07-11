@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     
     @StateObject var profileViewModel = ProfileViewModel()
+    @StateObject var authViewModel = AuthViewModel()
     
     @State private var user: User? = nil
     
@@ -22,35 +23,31 @@ struct ProfileView: View {
                     height: 80,
                     width: 80,
                     photoUrl: (
-                        URL(string:
-                                user?.avatarURL ??
-                                urlProfile
-                           )
+                        URL(string: user?.avatarURL ?? urlProfile)
                     )!
                 )
-                
                 VStack(alignment: .leading) {
-                    Text(user?.name ?? "Anderson Hassinger")
+                    Text(user?.name ?? "")
                         .font(.system(size: 22, weight: .bold))
-                    Text(user?.login ?? "linder3hs")
+                    Text(user?.login ?? "")
                 }
             }
             HStack {
                 Image(systemName: "house")
                 Text("Working from home")
             }
-            Text(user?.bio ?? "Software Developer")
+            Text(user?.bio ?? "")
             HStack(spacing: 50) {
-                RowIconText(icon: "building.fill", text: user?.company ?? "WT")
-                RowIconText(icon: "location.circle.fill", text: user?.location ?? "Lima, Perú")
+                RowIconText(icon: .constant("building.fill"), text: .constant(user?.company ?? ""))
+                RowIconText(icon: .constant("location.circle.fill"), text: .constant(user?.location ?? ""))
             }
             RowIconText(
-                icon: "envelope.fill",
-                text: user?.email ?? "linderhassinger00@gmail.com"
+                icon: .constant("envelope.fill"),
+                text: .constant(user?.email ?? "")
             )
-            RowIconText(icon: "paperplane.circle", text: user?.twitterUsername ?? "@linder3hs")
-            RowIconText(icon: "cpu", text: "Developer Program Member")
-            RowIconText(icon: "link", text: user?.blog ?? "www.linderhassinger.info")
+            RowIconText(icon: .constant("paperplane.circle"), text: .constant(user?.twitterUsername ?? ""))
+            RowIconText(icon: .constant( "cpu"), text: .constant("Developer Program Member"))
+            RowIconText(icon: .constant("link"), text: .constant(user?.blog ?? ""))
             
             HStack(spacing: 10) {
                 HStack {
@@ -59,6 +56,15 @@ struct ProfileView: View {
                 }
                 HStack {
                     Text(String(user?.following ?? 0) + "following")
+                }
+            }
+            VStack {
+                Spacer()
+                Button {
+                    authViewModel.logout()
+                } label: {
+                    Text("Sign Out")
+                        .foregroundColor(.pink)
                 }
             }
         }

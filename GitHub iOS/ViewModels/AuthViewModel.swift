@@ -39,7 +39,7 @@ class AuthViewModel: ObservableObject {
     }
     
     func login() {
-        provider.scopes = ["user:email"]
+        provider.scopes = ["user:email", "admin:repo_hook", "notifications"]
         provider.getCredentialWith(nil) { credential, error in
             if error != nil {
                 self.showError = true
@@ -64,6 +64,17 @@ class AuthViewModel: ObservableObject {
             }
             
         }
+    }
+    
+    func logout() {
+        let localRealm = try! Realm()
+        
+        try! localRealm.write {
+            localRealm.deleteAll()
+        }
+    
+        try? Auth.auth().signOut()
+        appState.currentScreen = .sigIn
     }
         
 }
