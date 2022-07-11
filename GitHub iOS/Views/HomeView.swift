@@ -11,15 +11,16 @@ struct HomeView: View {
     
     @State private var searchText: String = ""
     @State private var items: [Items] = [
-        Items(icon: "circle.circle.fill", text: "Issues"),
-        Items(icon: "arrow.triangle.branch", text: "Pull Request"),
-        Items(icon: "text.bubble.fill", text: "Discussions"),
-        Items(icon: "book.closed.fill", text: "Repositories"),
-        Items(icon: "building.fill", text: "Organizations"),
-        Items(icon: "star.fill", text: "Starred"),
+        Items(icon: "circle.circle.fill", text: "Issues", color: .green),
+        Items(icon: "arrow.triangle.branch", text: "Pull Request", color: .blue),
+        Items(icon: "text.bubble.fill", text: "Discussions", color: .purple),
+        Items(icon: "book.closed.fill", text: "Repositories", color: .black),
+        Items(icon: "building.fill", text: "Organizations", color: .orange),
+        Items(icon: "star.fill", text: "Starred", color: .yellow),
     ]
     
     var body: some View {
+        NavigationView {
             VStack(alignment: .leading, spacing: 20) {
                 TitleView(title: "Home")
                 
@@ -33,13 +34,24 @@ struct HomeView: View {
                             .padding(.bottom)
                             .padding(.top)
                         
-                        ForEach(items, id: \.text) { item in
-                            HStack(spacing: 20) {
-                                Image(systemName: item.icon)
-                                Text(item.text)
+                        List(items, id: \.text) { item in
+                            NavigationLink(destination: RepositoriesView()) {
+                                HStack(spacing: 20) {
+                                    Image(systemName: item.icon)
+                                        .foregroundColor(.white)
+                                        .padding(3)
+                                        .background(item.color)
+                                        .cornerRadius(4)
+                                        .font(.system(size: 14))
+                                    Text(item.text)
+                                        .foregroundColor(.black)
+                                }
+                                .padding(.bottom)
+                                .padding(.top)
                             }
-                            .padding(.bottom)
                         }
+                        .frame(width: .infinity, height: 400, alignment: .leading)
+                        .listStyle(PlainListStyle())
                         
                         Text("Favorites")
                             .font(.system(size: 22, weight: .bold))
@@ -48,6 +60,8 @@ struct HomeView: View {
                 }
             }
             .padding()
+            .navigationBarHidden(true)
+        }
     }
 }
 

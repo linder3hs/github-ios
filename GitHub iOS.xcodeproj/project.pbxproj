@@ -45,6 +45,7 @@
 		86E755AE287BCA9800BF1B6F /* NotificationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E755AD287BCA9800BF1B6F /* NotificationRow.swift */; };
 		86E755B0287BCF9300BF1B6F /* NotificationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E755AF287BCF9300BF1B6F /* NotificationRequest.swift */; };
 		86E755B2287BD06900BF1B6F /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E755B1287BD06900BF1B6F /* NotificationViewModel.swift */; };
+		86E755B4287BF87A00BF1B6F /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E755B3287BF87A00BF1B6F /* RepositoriesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		86E755AD287BCA9800BF1B6F /* NotificationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRow.swift; sourceTree = "<group>"; };
 		86E755AF287BCF9300BF1B6F /* NotificationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequest.swift; sourceTree = "<group>"; };
 		86E755B1287BD06900BF1B6F /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		86E755B3287BF87A00BF1B6F /* RepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				86825210286C2EDD0095998E /* NotificationsView.swift */,
 				86825212286C2EEA0095998E /* ExploreView.swift */,
 				86825214286C2EF90095998E /* ProfileView.swift */,
+				86E755B3287BF87A00BF1B6F /* RepositoriesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				86825213286C2EEA0095998E /* ExploreView.swift in Sources */,
 				86BFF117286E18AC0041B45C /* LaunchView.swift in Sources */,
 				86BFF11D286E1CF80041B45C /* User.swift in Sources */,
+				86E755B4287BF87A00BF1B6F /* RepositoriesView.swift in Sources */,
 				8682520C286C2ABE0095998E /* Items.swift in Sources */,
 				86825217286C2FC10095998E /* AppState.swift in Sources */,
 				86825209286C23B30095998E /* SignView.swift in Sources */,
@@ -480,6 +484,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -514,6 +519,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
