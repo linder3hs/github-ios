@@ -46,6 +46,10 @@
 		86E755B0287BCF9300BF1B6F /* NotificationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E755AF287BCF9300BF1B6F /* NotificationRequest.swift */; };
 		86E755B2287BD06900BF1B6F /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E755B1287BD06900BF1B6F /* NotificationViewModel.swift */; };
 		86E755B4287BF87A00BF1B6F /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E755B3287BF87A00BF1B6F /* RepositoriesView.swift */; };
+		86F58A9E287E28BD00BC6BC3 /* RepositoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F58A9D287E28BD00BC6BC3 /* RepositoryRow.swift */; };
+		86F58AA0287E30C300BC6BC3 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F58A9F287E30C300BC6BC3 /* Repository.swift */; };
+		86F58AA2287E319800BC6BC3 /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F58AA1287E319800BC6BC3 /* RepositoryViewModel.swift */; };
+		86F58AA4287E32FF00BC6BC3 /* RepositoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F58AA3287E32FF00BC6BC3 /* RepositoryRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +86,10 @@
 		86E755AF287BCF9300BF1B6F /* NotificationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequest.swift; sourceTree = "<group>"; };
 		86E755B1287BD06900BF1B6F /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		86E755B3287BF87A00BF1B6F /* RepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesView.swift; sourceTree = "<group>"; };
+		86F58A9D287E28BD00BC6BC3 /* RepositoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRow.swift; sourceTree = "<group>"; };
+		86F58A9F287E30C300BC6BC3 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		86F58AA1287E319800BC6BC3 /* RepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
+		86F58AA3287E32FF00BC6BC3 /* RepositoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +184,7 @@
 				86BFF113286DA0780041B45C /* GitHub.swift */,
 				86BFF11C286E1CF80041B45C /* User.swift */,
 				86E755AB287BC51200BF1B6F /* Notifications.swift */,
+				86F58A9F287E30C300BC6BC3 /* Repository.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +204,7 @@
 				86BFF120286E25890041B45C /* RowIconText.swift */,
 				86BFF122286E26910041B45C /* ImageAsync.swift */,
 				86E755AD287BCA9800BF1B6F /* NotificationRow.swift */,
+				86F58A9D287E28BD00BC6BC3 /* RepositoryRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -206,6 +216,7 @@
 				86BFF11A286E19940041B45C /* LaunchViewModel.swift */,
 				86BFF11E286E1DED0041B45C /* ProfileViewModel.swift */,
 				86E755B1287BD06900BF1B6F /* NotificationViewModel.swift */,
+				86F58AA1287E319800BC6BC3 /* RepositoryViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -222,10 +233,11 @@
 		86C3BE8A28702C50007AFBBD /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				86C3BE8B28702C5F007AFBBD /* UserRequest.swift */,
-				86E755AF287BCF9300BF1B6F /* NotificationRequest.swift */,
-				86C3BE8D28709572007AFBBD /* Service.swift */,
 				86C3BE8F28709592007AFBBD /* Routes.swift */,
+				86C3BE8D28709572007AFBBD /* Service.swift */,
+				86C3BE8B28702C5F007AFBBD /* UserRequest.swift */,
+				86F58AA3287E32FF00BC6BC3 /* RepositoryRequest.swift */,
+				86E755AF287BCF9300BF1B6F /* NotificationRequest.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -318,11 +330,13 @@
 			files = (
 				86BFF109286D98D90041B45C /* AppDelegate.swift in Sources */,
 				86825215286C2EF90095998E /* ProfileView.swift in Sources */,
+				86F58AA2287E319800BC6BC3 /* RepositoryViewModel.swift in Sources */,
 				86825213286C2EEA0095998E /* ExploreView.swift in Sources */,
 				86BFF117286E18AC0041B45C /* LaunchView.swift in Sources */,
 				86BFF11D286E1CF80041B45C /* User.swift in Sources */,
 				86E755B4287BF87A00BF1B6F /* RepositoriesView.swift in Sources */,
 				8682520C286C2ABE0095998E /* Items.swift in Sources */,
+				86F58AA0287E30C300BC6BC3 /* Repository.swift in Sources */,
 				86825217286C2FC10095998E /* AppState.swift in Sources */,
 				86825209286C23B30095998E /* SignView.swift in Sources */,
 				86E755B0287BCF9300BF1B6F /* NotificationRequest.swift in Sources */,
@@ -332,12 +346,14 @@
 				86BFF11B286E19940041B45C /* LaunchViewModel.swift in Sources */,
 				86BFF114286DA0780041B45C /* GitHub.swift in Sources */,
 				86BFF10C286D9AC70041B45C /* AuthViewModel.swift in Sources */,
+				86F58AA4287E32FF00BC6BC3 /* RepositoryRequest.swift in Sources */,
 				86E755B2287BD06900BF1B6F /* NotificationViewModel.swift in Sources */,
 				86BFF123286E26910041B45C /* ImageAsync.swift in Sources */,
 				86E755AE287BCA9800BF1B6F /* NotificationRow.swift in Sources */,
 				8682520F286C2E820095998E /* MainView.swift in Sources */,
 				86BFF11F286E1DED0041B45C /* ProfileViewModel.swift in Sources */,
 				86825206286C239A0095998E /* HomeView.swift in Sources */,
+				86F58A9E287E28BD00BC6BC3 /* RepositoryRow.swift in Sources */,
 				86825211286C2EDD0095998E /* NotificationsView.swift in Sources */,
 				86E755AC287BC51200BF1B6F /* Notifications.swift in Sources */,
 				86C3BE9028709592007AFBBD /* Routes.swift in Sources */,

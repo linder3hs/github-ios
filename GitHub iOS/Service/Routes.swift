@@ -13,6 +13,7 @@ class Routes {
     let BASE_URL = "https://api.github.com"
     let USER = "/user"
     let NOTIFICATIONS = "/notifications"
+    let REPOSITORY = "/user/repos"
     
     func setRequest(url: String, method: String = "GET") -> URLRequest {
         let url = URL(string: "\(BASE_URL)\(url)")!
