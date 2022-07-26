@@ -6,14 +6,15 @@
 //
 
 import Foundation
+import Combine
 
-class RepositoryRequest {
+struct RepositoryRequest {
     
-    let service = Service()
+    static let service = Service()
     
-    func loadData() async -> [Repository]? {
+    static func loadData() async -> [Repository]? {
         do {
-            guard let data = await service.getData(route: "\(service.REPOSITORY)") else { return nil }
+            guard let data = await service.fetchJSON(route: Routes.getURL(route: "repository")) else { return nil }
             return try JSONDecoder().decode([Repository].self, from: data)
         } catch let error {
             print("error: \(error)")

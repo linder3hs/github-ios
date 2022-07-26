@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Repository: Codable {
+struct Repository: Decodable {
     let id: Int
     let node_id: String
     let name: String

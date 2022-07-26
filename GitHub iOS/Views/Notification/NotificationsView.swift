@@ -34,8 +34,13 @@ struct NotificationsView: View {
                 }
             }
             
+            if notifications.isEmpty {
+                ProgressIndicatorView()
+            }
+            
             List(notifications, id: \.id) { notification in
                 NotificationRow(notification: notification)
+                    .listRowInsets(EdgeInsets(top: 10, leading: -10, bottom: 10, trailing: 10))
             }
             .task {
                 notifications = await notificationViewModel.loadNotifications()!

@@ -13,7 +13,7 @@ struct RepositoryRow: View {
     
     var body: some View {
         HStack(alignment: .center, spacing: 20) {
-            ImageAsync(height: 40, width: 40, photoUrl: URL(string: repository.owner.avatar_url)!)
+            ImageAsync(height: 30, width: 30, photoUrl: URL(string: repository.owner.avatar_url)!)
             VStack(alignment: .leading, spacing: 3) {
                 Text(repository.owner.login)
                     .font(.system(size: 14))
@@ -24,8 +24,6 @@ struct RepositoryRow: View {
             Spacer()
             Image(systemName: "chevron.right")
         }
-        .padding(.bottom)
-        .padding(.top)
     }
 }
 

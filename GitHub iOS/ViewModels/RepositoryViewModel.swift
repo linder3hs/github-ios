@@ -9,10 +9,8 @@ import Foundation
 
 class RepositoryViewModel: ObservableObject {
     
-    let repostioryRequest = RepositoryRequest()
-    
     func loadRepository() async -> [Repository]? {
-        return await repostioryRequest.loadData()
+        return await RepositoryRequest.loadData()
     }
     
 }

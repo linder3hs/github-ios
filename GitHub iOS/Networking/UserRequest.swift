@@ -7,13 +7,13 @@
 
 import Foundation
 
-class UserRequest {
+struct UserRequest {
     
-    let service = Service()
+    static let service = Service()
     
-    func loadData() async -> User? {
+    static func loadData() async -> User? {
         do {
-            guard let data = await service.getData(route: "\(service.USER)") else { return nil }
+            guard let data = await service.fetchJSON(route: Routes.getURL(route: "user")) else { return nil }
             return try JSONDecoder().decode(User.self, from: data)
         } catch let error {
             print("error: \(error)")

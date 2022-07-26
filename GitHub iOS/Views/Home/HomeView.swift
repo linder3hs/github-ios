@@ -11,12 +11,42 @@ struct HomeView: View {
     
     @State private var searchText: String = ""
     @State private var items: [Items] = [
-        Items(icon: "circle.circle.fill", text: "Issues", color: .green),
-        Items(icon: "arrow.triangle.branch", text: "Pull Request", color: .blue),
-        Items(icon: "text.bubble.fill", text: "Discussions", color: .purple),
-        Items(icon: "book.closed.fill", text: "Repositories", color: .black),
-        Items(icon: "building.fill", text: "Organizations", color: .orange),
-        Items(icon: "star.fill", text: "Starred", color: .yellow),
+        Items(
+            icon: "circle.circle.fill",
+            text: "Issues",
+            color: .green,
+            destination: AnyView(IssuesView())
+        ),
+        Items(
+            icon: "arrow.triangle.branch",
+            text: "Pull Request",
+            color: .blue,
+            destination: AnyView(PullRequestView())
+        ),
+        Items(
+            icon: "text.bubble.fill",
+            text: "Discussions",
+            color: .purple,
+            destination: AnyView(DiscusionsView())
+        ),
+        Items(
+            icon: "book.closed.fill",
+            text: "Repositories",
+            color: .black,
+            destination: AnyView(RepositoriesView())
+        ),
+        Items(
+            icon: "building.fill",
+            text: "Organizations",
+            color: .orange,
+            destination: AnyView(OrganizationsView())
+        ),
+        Items(
+            icon: "star.fill",
+            text: "Starred",
+            color: .yellow,
+            destination: AnyView(StarredView())
+        ),
     ]
     
     var body: some View {
@@ -35,7 +65,7 @@ struct HomeView: View {
                             .padding(.top)
                         
                         List(items, id: \.text) { item in
-                            NavigationLink(destination: RepositoriesView()) {
+                            NavigationLink(destination: item.destination) {
                                 HStack(spacing: 20) {
                                     Image(systemName: item.icon)
                                         .foregroundColor(.white)

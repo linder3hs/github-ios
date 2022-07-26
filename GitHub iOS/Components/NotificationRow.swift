@@ -15,22 +15,29 @@ struct NotificationRow: View {
         HStack {
             VStack(alignment: .leading, spacing: 10) {
                 Text((notification.repository?.full_name)!)
+                    .foregroundColor(.gray)
+                    .font(.system(size: 14))
                 Text(notification.subject.title)
                     .lineLimit(2)
-                    .font(.system(size: 16, weight: .bold))
+                    .font(.system(size: 16, weight: .semibold))
                 HStack {
                     ImageAsync(
                         height: 30,
                         width: 30,
                         photoUrl: URL(string: (notification.repository?.owner?.avatar_url)!)!
                     )
-                    Text(notification.repository?.description ?? "no-description")
-                        .lineLimit(1)
+                    if let desc = notification.repository?.description {
+                        Text(desc)
+                            .lineLimit(2)
+                            .font(.system(size: 14))
+                    }
+                    
                 }
             }
             Spacer()
-            Text("2 min")
-        }
+            Image(systemName: "chevron.right")
+//            Text(notification.updated_at.formatDate)
+        }.padding()
     }
 }
 

@@ -11,4 +11,5 @@ struct Items {
     let icon: String
     let text: String
     let color: Color
+    let destination: AnyView
 }

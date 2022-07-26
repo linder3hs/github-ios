@@ -9,10 +9,8 @@ import Foundation
 
 class NotificationViewModel: ObservableObject {
     
-    let notificationRequest = NotificationRequest()
-    
     func loadNotifications() async -> [Notifications]? {
-        return await notificationRequest.loadData()
+        return await NotificationRequest.loadData()
     }
     
 }

@@ -23,17 +23,22 @@ struct RepositoriesView: View {
                     .font(.system(size: 22, weight: .semibold))
             }
             TitleView(title: "Repositories")
-            List(repositories, id: \.id) { repo in
-                RepositoryRow(repository: repo)
+            
+            if repositories.isEmpty {
+                ProgressIndicatorView()
             }
-            .task {
-                repositories = await repositoryViewModel.loadRepository()!
-            }
-            .listStyle(PlainListStyle())
-            .refreshable {
-                repositories.removeAll()
-                repositories = await repositoryViewModel.loadRepository()!
-            }
+            
+                List(repositories, id: \.id) { repo in
+                    NavigationLink(destination: RepoDetailView()) {
+                        RepositoryRow(repository: repo)
+                            .listRowInsets(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+                    }
+                }
+                .task {
+                    repositories = await repositoryViewModel.loadRepository()!
+                }
+                .listStyle(PlainListStyle())
+            
         }
         .navigationBarHidden(true)
         .padding()

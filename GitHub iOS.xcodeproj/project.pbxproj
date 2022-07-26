@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		861D239028892FAF00348AAE /* RepoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D238F28892FAF00348AAE /* RepoDetailView.swift */; };
 		8627CB04287B689100CD47A9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8627CB03287B689100CD47A9 /* FirebaseAnalytics */; };
 		8627CB06287B689100CD47A9 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8627CB05287B689100CD47A9 /* FirebaseAuth */; };
 		8627CB08287B689100CD47A9 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8627CB07287B689100CD47A9 /* FirebaseDatabase */; };
@@ -15,6 +16,11 @@
 		8627CB0E287B689100CD47A9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8627CB0D287B689100CD47A9 /* FirebaseStorage */; };
 		8627CB11287B68D200CD47A9 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8627CB10287B68D200CD47A9 /* Realm */; };
 		8627CB13287B68D200CD47A9 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8627CB12287B68D200CD47A9 /* RealmSwift */; };
+		8670AB6228872A1C00BE10AA /* IssuesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8670AB6128872A1C00BE10AA /* IssuesView.swift */; };
+		8670AB6428872A9900BE10AA /* PullRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8670AB6328872A9900BE10AA /* PullRequestView.swift */; };
+		8670AB6A28872B4700BE10AA /* DiscussionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8670AB6928872B4700BE10AA /* DiscussionsView.swift */; };
+		8670AB6C28872B8700BE10AA /* OrganizationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8670AB6B28872B8700BE10AA /* OrganizationsView.swift */; };
+		8670AB6E28872BAB00BE10AA /* StarredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8670AB6D28872BAB00BE10AA /* StarredView.swift */; };
 		868251F7286C23750095998E /* GitHub_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868251F6286C23750095998E /* GitHub_iOSApp.swift */; };
 		868251FB286C23760095998E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868251FA286C23760095998E /* Assets.xcassets */; };
 		868251FE286C23760095998E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868251FD286C23760095998E /* Preview Assets.xcassets */; };
@@ -41,6 +47,11 @@
 		86C3BE8C28702C5F007AFBBD /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C3BE8B28702C5F007AFBBD /* UserRequest.swift */; };
 		86C3BE8E28709572007AFBBD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C3BE8D28709572007AFBBD /* Service.swift */; };
 		86C3BE9028709592007AFBBD /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C3BE8F28709592007AFBBD /* Routes.swift */; };
+		86D5F37D288761E800549DC3 /* GitHub+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D5F37C288761E800549DC3 /* GitHub+Date.swift */; };
+		86D5F37F288774D700549DC3 /* ProgressIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D5F37E288774D700549DC3 /* ProgressIndicatorView.swift */; };
+		86D5F3822887760100549DC3 /* routeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D5F3812887760100549DC3 /* routeList.swift */; };
+		86D5F384288779F600549DC3 /* JSONWebserviceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D5F383288779F600549DC3 /* JSONWebserviceResponse.swift */; };
+		86D5F3872887817300549DC3 /* Loggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D5F3862887817300549DC3 /* Loggable.swift */; };
 		86E755AC287BC51200BF1B6F /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E755AB287BC51200BF1B6F /* Notifications.swift */; };
 		86E755AE287BCA9800BF1B6F /* NotificationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E755AD287BCA9800BF1B6F /* NotificationRow.swift */; };
 		86E755B0287BCF9300BF1B6F /* NotificationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E755AF287BCF9300BF1B6F /* NotificationRequest.swift */; };
@@ -53,6 +64,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		861D238F28892FAF00348AAE /* RepoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailView.swift; sourceTree = "<group>"; };
+		8670AB6128872A1C00BE10AA /* IssuesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesView.swift; sourceTree = "<group>"; };
+		8670AB6328872A9900BE10AA /* PullRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestView.swift; sourceTree = "<group>"; };
+		8670AB6928872B4700BE10AA /* DiscussionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionsView.swift; sourceTree = "<group>"; };
+		8670AB6B28872B8700BE10AA /* OrganizationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsView.swift; sourceTree = "<group>"; };
+		8670AB6D28872BAB00BE10AA /* StarredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredView.swift; sourceTree = "<group>"; };
 		868251F3286C23750095998E /* GitHub iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		868251F6286C23750095998E /* GitHub_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHub_iOSApp.swift; sourceTree = "<group>"; };
 		868251FA286C23760095998E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +98,11 @@
 		86C3BE8B28702C5F007AFBBD /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
 		86C3BE8D28709572007AFBBD /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		86C3BE8F28709592007AFBBD /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		86D5F37C288761E800549DC3 /* GitHub+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitHub+Date.swift"; sourceTree = "<group>"; };
+		86D5F37E288774D700549DC3 /* ProgressIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorView.swift; sourceTree = "<group>"; };
+		86D5F3812887760100549DC3 /* routeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = routeList.swift; sourceTree = "<group>"; };
+		86D5F383288779F600549DC3 /* JSONWebserviceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONWebserviceResponse.swift; sourceTree = "<group>"; };
+		86D5F3862887817300549DC3 /* Loggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loggable.swift; sourceTree = "<group>"; };
 		86E755AB287BC51200BF1B6F /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		86E755AD287BCA9800BF1B6F /* NotificationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRow.swift; sourceTree = "<group>"; };
 		86E755AF287BCF9300BF1B6F /* NotificationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequest.swift; sourceTree = "<group>"; };
@@ -111,6 +133,93 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		861D238E28892F9C00348AAE /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				86E755B3287BF87A00BF1B6F /* RepositoriesView.swift */,
+				861D238F28892FAF00348AAE /* RepoDetailView.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		861D239128892FB600348AAE /* PR */ = {
+			isa = PBXGroup;
+			children = (
+				8670AB6328872A9900BE10AA /* PullRequestView.swift */,
+			);
+			path = PR;
+			sourceTree = "<group>";
+		};
+		861D239228892FC200348AAE /* Issues */ = {
+			isa = PBXGroup;
+			children = (
+				8670AB6128872A1C00BE10AA /* IssuesView.swift */,
+			);
+			path = Issues;
+			sourceTree = "<group>";
+		};
+		861D239328892FCB00348AAE /* Discussion */ = {
+			isa = PBXGroup;
+			children = (
+				8670AB6928872B4700BE10AA /* DiscussionsView.swift */,
+			);
+			path = Discussion;
+			sourceTree = "<group>";
+		};
+		861D239428892FD900348AAE /* Orgranization */ = {
+			isa = PBXGroup;
+			children = (
+				8670AB6B28872B8700BE10AA /* OrganizationsView.swift */,
+			);
+			path = Orgranization;
+			sourceTree = "<group>";
+		};
+		861D239528892FE400348AAE /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				8670AB6D28872BAB00BE10AA /* StarredView.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		8670AB6528872AAF00BE10AA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				861D239528892FE400348AAE /* Start */,
+				861D239428892FD900348AAE /* Orgranization */,
+				861D239328892FCB00348AAE /* Discussion */,
+				861D239228892FC200348AAE /* Issues */,
+				861D239128892FB600348AAE /* PR */,
+				861D238E28892F9C00348AAE /* Repo */,
+				86825205286C239A0095998E /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8670AB6628872AC400BE10AA /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				86825210286C2EDD0095998E /* NotificationsView.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		8670AB6728872AEA00BE10AA /* Explorer */ = {
+			isa = PBXGroup;
+			children = (
+				86825212286C2EEA0095998E /* ExploreView.swift */,
+			);
+			path = Explorer;
+			sourceTree = "<group>";
+		};
+		8670AB6828872AF700BE10AA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				86825214286C2EF90095998E /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		868251EA286C23750095998E = {
 			isa = PBXGroup;
 			children = (
@@ -130,7 +239,10 @@
 		868251F5286C23750095998E /* GitHub iOS */ = {
 			isa = PBXGroup;
 			children = (
-				86C3BE8A28702C50007AFBBD /* Service */,
+				86D5F3852887816100549DC3 /* Protocols */,
+				86D5F380288775F400549DC3 /* Enum */,
+				86D5F37B288761DA00549DC3 /* Helper */,
+				86C3BE8A28702C50007AFBBD /* Networking */,
 				86BFF115286E183F0041B45C /* Launch */,
 				86BFF10A286D9AB80041B45C /* ViewModels */,
 				86825218286C30DA0095998E /* Components */,
@@ -160,11 +272,10 @@
 		86825204286C23850095998E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				86825205286C239A0095998E /* HomeView.swift */,
-				86825210286C2EDD0095998E /* NotificationsView.swift */,
-				86825212286C2EEA0095998E /* ExploreView.swift */,
-				86825214286C2EF90095998E /* ProfileView.swift */,
-				86E755B3287BF87A00BF1B6F /* RepositoriesView.swift */,
+				8670AB6828872AF700BE10AA /* Profile */,
+				8670AB6728872AEA00BE10AA /* Explorer */,
+				8670AB6628872AC400BE10AA /* Notification */,
+				8670AB6528872AAF00BE10AA /* Home */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +316,7 @@
 				86BFF122286E26910041B45C /* ImageAsync.swift */,
 				86E755AD287BCA9800BF1B6F /* NotificationRow.swift */,
 				86F58A9D287E28BD00BC6BC3 /* RepositoryRow.swift */,
+				86D5F37E288774D700549DC3 /* ProgressIndicatorView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -230,7 +342,7 @@
 			path = Launch;
 			sourceTree = "<group>";
 		};
-		86C3BE8A28702C50007AFBBD /* Service */ = {
+		86C3BE8A28702C50007AFBBD /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				86C3BE8F28709592007AFBBD /* Routes.swift */,
@@ -238,8 +350,33 @@
 				86C3BE8B28702C5F007AFBBD /* UserRequest.swift */,
 				86F58AA3287E32FF00BC6BC3 /* RepositoryRequest.swift */,
 				86E755AF287BCF9300BF1B6F /* NotificationRequest.swift */,
+				86D5F383288779F600549DC3 /* JSONWebserviceResponse.swift */,
 			);
-			path = Service;
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		86D5F37B288761DA00549DC3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				86D5F37C288761E800549DC3 /* GitHub+Date.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		86D5F380288775F400549DC3 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				86D5F3812887760100549DC3 /* routeList.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		86D5F3852887816100549DC3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				86D5F3862887817300549DC3 /* Loggable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,13 +465,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86D5F3872887817300549DC3 /* Loggable.swift in Sources */,
 				86BFF109286D98D90041B45C /* AppDelegate.swift in Sources */,
 				86825215286C2EF90095998E /* ProfileView.swift in Sources */,
+				8670AB6228872A1C00BE10AA /* IssuesView.swift in Sources */,
 				86F58AA2287E319800BC6BC3 /* RepositoryViewModel.swift in Sources */,
 				86825213286C2EEA0095998E /* ExploreView.swift in Sources */,
 				86BFF117286E18AC0041B45C /* LaunchView.swift in Sources */,
+				8670AB6A28872B4700BE10AA /* DiscussionsView.swift in Sources */,
 				86BFF11D286E1CF80041B45C /* User.swift in Sources */,
+				8670AB6E28872BAB00BE10AA /* StarredView.swift in Sources */,
 				86E755B4287BF87A00BF1B6F /* RepositoriesView.swift in Sources */,
+				86D5F3822887760100549DC3 /* routeList.swift in Sources */,
 				8682520C286C2ABE0095998E /* Items.swift in Sources */,
 				86F58AA0287E30C300BC6BC3 /* Repository.swift in Sources */,
 				86825217286C2FC10095998E /* AppState.swift in Sources */,
@@ -351,11 +493,17 @@
 				86BFF123286E26910041B45C /* ImageAsync.swift in Sources */,
 				86E755AE287BCA9800BF1B6F /* NotificationRow.swift in Sources */,
 				8682520F286C2E820095998E /* MainView.swift in Sources */,
+				8670AB6428872A9900BE10AA /* PullRequestView.swift in Sources */,
+				86D5F37F288774D700549DC3 /* ProgressIndicatorView.swift in Sources */,
 				86BFF11F286E1DED0041B45C /* ProfileViewModel.swift in Sources */,
 				86825206286C239A0095998E /* HomeView.swift in Sources */,
+				86D5F384288779F600549DC3 /* JSONWebserviceResponse.swift in Sources */,
+				861D239028892FAF00348AAE /* RepoDetailView.swift in Sources */,
 				86F58A9E287E28BD00BC6BC3 /* RepositoryRow.swift in Sources */,
+				8670AB6C28872B8700BE10AA /* OrganizationsView.swift in Sources */,
 				86825211286C2EDD0095998E /* NotificationsView.swift in Sources */,
 				86E755AC287BC51200BF1B6F /* Notifications.swift in Sources */,
+				86D5F37D288761E800549DC3 /* GitHub+Date.swift in Sources */,
 				86C3BE9028709592007AFBBD /* Routes.swift in Sources */,
 				86BFF121286E25890041B45C /* RowIconText.swift in Sources */,
 				8682521A286C30E70095998E /* TitleView.swift in Sources */,

@@ -7,13 +7,13 @@
 
 import Foundation
 
-class NotificationRequest {
+struct NotificationRequest {
     
-    let service = Service()
+    static let service = Service()
     
-    func loadData() async -> [Notifications]? {
+    static func loadData() async -> [Notifications]? {
         do {
-            guard let data = await service.getData(route: "\(service.NOTIFICATIONS)") else { return nil }
+            guard let data = await service.fetchJSON(route: Routes.getURL(route: "notifications")) else { return nil }
             return try JSONDecoder().decode([Notifications].self, from: data)
         } catch let error {
             print("error: \(error)")
